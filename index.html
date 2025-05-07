@@ -8,58 +8,66 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body onload="init()">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">QuizApp</a>
-        </ul>
+  <nav class="navbar bg-body-tertiary position-relative">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">QuizApp</a>
+
+      <!-- Menü -->
+      <div class="d-flex gap-4">
+
+        <!-- Dropdown 1: Frontend / Developer -->
+        <div class="nav-item dropdown position-relative">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Frontend / Developer
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end position-absolute fade">
+            <li><a class="dropdown-item" href="HTML.html">HTML</a></li>
+            <li><a class="dropdown-item" href="CSS.html">CSS</a></li>
+            <li><a class="dropdown-item" href="JS.html">JavaScript</a></li>
+            <li><a class="dropdown-item" href="general.html">General</a></li>
+          </ul>
+        </div>
+
+        <!-- Dropdown 2: Fun -->
+        <div class="nav-item dropdown position-relative">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Fun
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end position-absolute fade">
+            <li><a class="dropdown-item" href="Ophelia.html">Ophelia</a></li>
+            <li><a class="dropdown-item" href="LoL.html">LoL</a></li>
+            <li><a class="dropdown-item" href="wheelie.html">Wheelie</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </nav>
 
   <div class="container">
     <div class="card quiz-card">
-      <div>
-      <div class="card-body" id="endScreen" style="display: none;">
-        quiz beendet
-      </div>
-      <div class="card-body" id="questionBody">
-        <h5 class="card-title" id="questionText">frage</h5>
-
-        <div class="card answer_hover mb-2" onclick="answer('answer_1')">
-          <div class="card-body" id="answer_1">
-            This is some text within a card body.
+      <div class="card-body">
+        <h5 class="card-title">
+          Hey!<br>
+          welches Quiz Möchtes du Spielen?</h5>
+        <div class="card">
+          <div class="list-group list-group-flush">
+            <a href="HTML.html" class="list-group-item list-group-item-action">HTML</a>
+            <a href="CSS.html" class="list-group-item list-group-item-action">CSS</a>
+            <a href="JS.html" class="list-group-item list-group-item-action">JS</a>
+            <a href="general.html" class="list-group-item list-group-item-action">General</a>
+            <a href="Ophelia.html" class="list-group-item list-group-item-action">Ophelia</a>
+            <a href="LoL.html" class="list-group-item list-group-item-action">LoL</a>
+            <a href="wheelie.html" class="list-group-item list-group-item-action">Wheelie</a>
           </div>
         </div>
-
-        <div class="card answer_hover mb-2" onclick="answer('answer_2')">
-          <div class="card-body" id="answer_2">
-            This is some text within a card body.
-          </div>
-        </div>
-
-        <div class="card answer_hover mb-2" onclick="answer('answer_3')">
-          <div class="card-body" id="answer_3">
-            This is some text within a card body.
-          </div>
-        </div>
-
-        <div class="card answer_hover mb-2" onclick="answer('answer_4')">
-          <div class="card-body" id="answer_4">
-            This is some text within a card body.
-          </div>
-        </div>
-
-        <div class="next-question">
-          <div>
-            <b id="currentQuestion"></b> von <b id="arrayLength"></b> fragen
-          </div>
-          <button onclick="nextQuestion()" class="btn btn-primary" id="next-button" disabled>Nächste Frage</button>
-        </div>
-        </div>
-
       </div>
     </div>
   </div>
