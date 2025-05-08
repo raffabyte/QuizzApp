@@ -5,59 +5,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuizApp</title>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="wheelieObj.js"></script>
-  <script src="script.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/data/JS.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body onload="init()">
-    <nav class="navbar bg-body-tertiary position-relative">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-    
-          <!-- Logo -->
-          <a class="navbar-brand" href="index.html">QuizApp</a>
-    
-          <!-- Menü -->
-          <div class="d-flex gap-4">
-    
-            <!-- Dropdown 1: Frontend / Developer -->
-            <div class="nav-item dropdown position-relative">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                Frontend / Developer
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end position-absolute fade">
-                <li><a class="dropdown-item" href="HTML.html">HTML</a></li>
-                <li><a class="dropdown-item" href="CSS.html">CSS</a></li>
-                <li><a class="dropdown-item" href="JS.html">JavaScript</a></li>
-                <li><a class="dropdown-item" href="general.html">General</a></li>
-              </ul>
-            </div>
-    
-            <!-- Dropdown 2: Fun -->
-            <div class="nav-item dropdown position-relative">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                Fun
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end position-absolute fade">
-                <li><a class="dropdown-item" href="Ophelia.html">Ophelia</a></li>
-                <li><a class="dropdown-item" href="LoL.html">LoL</a></li>
-                <li><a class="dropdown-item" href="wheelie.html">Wheelie</a></li>
-              </ul>
-            </div>
-    
-          </div>
+  <nav class="navbar bg-body-tertiary position-relative">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="/index.html">QuizApp</a>
+
+      <!-- Menü -->
+      <div class="d-flex gap-4">
+
+        <!-- Dropdown 1: Frontend / Developer -->
+        <div class="nav-item dropdown position-relative">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Frontend / Developer
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end position-absolute fade">
+            <li><a class="dropdown-item" href="/pages/HTML.html">HTML</a></li>
+            <li><a class="dropdown-item" href="/pages/CSS.html">CSS</a></li>
+            <li><a class="dropdown-item" href="/pages/JS.html">JavaScript</a></li>
+            <li><a class="dropdown-item" href="/pages/general.html">General</a></li>
+          </ul>
         </div>
-      </nav>
+
+        <!-- Dropdown 2: Fun -->
+        <div class="nav-item dropdown position-relative">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Fun
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end position-absolute fade">
+            <li><a class="dropdown-item" href="/pages/Ophelia.html">Ophelia</a></li>
+            <li><a class="dropdown-item" href="/pages/LoL.html">LoL</a></li>
+            <li><a class="dropdown-item" href="/pages/wheelie.html">Wheelie</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </nav>
 
   <div class="container">
     <div class="card quiz-card">
       <div>
         <div class="card-body" id="startScreen">
-            <h5 class="card-title">Zeit für Adrenalin auf zwei Rädern!</h5>
-            <p class="card-text">Bremse rechts, Herz links – und bloß nicht nach hinten kippen.</p>
-            
+            <h5 class="card-title">Zeit zu script-en wie ein Profi!</h5>
+            <p class="card-text">Wenn du &quot;undefined&quot; bist, hast du verloren – wenn nicht, klick los!</p>            
           <div class="next-question">
             <a href="index.html" class="btn btn-primary">Lieber Nicht</a>
           <button onclick="startQuiz()" class="btn btn-primary start-quiz">Quiz Starten</button>
@@ -72,7 +71,7 @@
           </h6>
           <div class="next-question">
             <button onclick="erneutSpielen()" class="btn btn-primary">Erneut Spielen</button>
-            <a href="index.html" class="btn btn-primary">Home</a>
+            <a href="/index.html" class="btn btn-primary">Home</a>
           </div>
         </div>
         <div class="card-body" id="questionBody" style="display: none;">
